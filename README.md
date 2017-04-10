@@ -6,21 +6,21 @@ https://forum.openframeworks.cc/t/opencv-ofxcvimage-how-to-load-an-external-file
 
 not all features have been tested
 
-
 ## Installation
 copy files to ofOpofxOpenCv folder
 
 add this line to ofxOpenCv.h file
 ```
 #include "ofxCvColorImageAlpha.h"
-
-## Usage
 ```
+## Usage
 ofApp.h
+```
 ofxCvColorImageAlpha	alphaColorImg;
 ofImage img;
 ```
 ofApp.cpp
+```
 setup()
 	img.load("fileName.png");
 	alphaColorImg.allocate(img.getWidth(), img.getHeight());
@@ -28,6 +28,7 @@ setup()
 	
 draw()
 	alphaColorImg.draw(0, 0);
+```
 
 
 
