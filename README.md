@@ -11,15 +11,15 @@ not all features have been tested
 copy files to ofOpofxOpenCv folder
 
 add this line to ofxOpenCv.h file
-
+```
 #include "ofxCvColorImageAlpha.h"
 
 ## Usage
-
+```
 ofApp.h
 ofxCvColorImageAlpha	alphaColorImg;
 ofImage img;
-
+```
 ofApp.cpp
 setup()
 	img.load("fileName.png");
