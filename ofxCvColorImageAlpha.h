@@ -7,9 +7,7 @@
 *
 */
 
-
-#ifndef OFX_CV_COLOR_IMAGE_ALPHA_H
-#define OFX_CV_COLOR_IMAGE_ALPHA_H
+#pragma once
 
 #include "ofxCvImage.h"
 
@@ -131,14 +129,9 @@ public:
 	
 	
 protected:
-	
+	void allocateTexture();
+	void allocatePixels(int w, int h);
     void init();
     IplImage*  cvGrayscaleImage;    // internal helper grayscale, allocated on demand
-	
-	
-      
+   
 };
-
-
-
-#endif

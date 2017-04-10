@@ -7,8 +7,6 @@
 #include "ofxCvColorImageAlpha.h"
 
 
-
-
 //--------------------------------------------------------------------------------
 ofxCvColorImageAlpha::ofxCvColorImageAlpha() {
     init();
@@ -28,11 +26,22 @@ ofxCvColorImageAlpha::ofxCvColorImageAlpha( const ofxCvColorImageAlpha& _mom ) {
 }
 
 //--------------------------------------------------------------------------------
+void ofxCvColorImageAlpha::allocateTexture() {
+	tex.allocate(pixels);
+}
+
+//--------------------------------------------------------------------------------
+void ofxCvColorImageAlpha::allocatePixels(int w, int h) {
+	//pixels.allocate(w, h, OF_PIXELS_RGB);  // shows hidden data in png file ? 
+	pixels.allocate(w, h, OF_PIXELS_RGBA);
+}
+
+//--------------------------------------------------------------------------------
 void ofxCvColorImageAlpha::init() {
     ipldepth = IPL_DEPTH_8U;
     iplchannels = 4;
-    gldepth = GL_UNSIGNED_BYTE;
-    glchannels = GL_RGBA;
+	// gldepth = GL_UNSIGNED_BYTE;
+    // glchannels = GL_RGBA;
     cvGrayscaleImage = NULL;
 }
 
@@ -44,11 +53,7 @@ void ofxCvColorImageAlpha::clear() {
     ofxCvImage::clear();    //call clear in base class
 }
 
-
-
-
 // Set Pixel Data
-
 //--------------------------------------------------------------------------------
 void ofxCvColorImageAlpha::set( float value ){
     cvSet(cvImage, cvScalar(value, value, value));
