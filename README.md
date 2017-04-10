@@ -1,6 +1,4 @@
-<snippet>
-  <content><![CDATA[
-# ${1:ofxCvColorImageAlpha}
+## ofxCvColorImageAlpha
 
 port of ofxCvColorImageAlpha to openFrameworks 0.9.3
 
@@ -11,7 +9,9 @@ not all features have been tested
 
 ## Installation
 copy files to ofOpofxOpenCv folder
+
 add this line to ofxOpenCv.h file
+
 #include "ofxCvColorImageAlpha.h"
 
 ## Usage
