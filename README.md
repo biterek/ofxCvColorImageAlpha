@@ -7,7 +7,7 @@ https://forum.openframeworks.cc/t/opencv-ofxcvimage-how-to-load-an-external-file
 not all features have been tested
 
 ## Installation
-copy files to ofOpofxOpenCv folder
+copy files to addons/ofxOpenCv/src folder
 
 add this line to ofxOpenCv.h file
 ```
